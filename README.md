@@ -28,16 +28,17 @@ cd /tmp/
 curl -O <chromedriver_of_your_browser_version>
 unzip chromedriver_linux64.zip
 sudo mv chromedriver /usr/local/bin/
-
+```
 ## Login Details
-Change the username and password 
+Change the username and password in the login_details.txt file.
 
 ## Crontab Instructions
 Cron jobs to log in and log out. Use this
 [site](https://crontab.guru/monday-to-friday) to find the cron time according to
 your timings. The time set below represent "Every weekday (Monday~Friday); Clock
 In at 10:00 and Clock Out at 19:30". Change the time as per your liking:
-```
+
+```python
 # Add your python path in the beginning
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
@@ -49,4 +50,4 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/us
 
 ## Troubleshooting
 In the above crontab command, the output is logged at ```/tmp/king_app.log```.
-In case of any errors check the log.
+In case of any errors, check the log.
