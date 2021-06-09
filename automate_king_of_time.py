@@ -2,7 +2,7 @@
 '''
 This is a simple automation script to automate King Of Time Logging function.
 
-
+author: Suraj Pattar
 '''
 import sys
 import configargparse
