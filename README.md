@@ -15,14 +15,15 @@ display to run this script.
 pip install -r requirements.txt
 ```
 * Chromedriver
+
 For webdriver to work, you need to first install chromedriver. Follow the
 instructions at this
 [link](https://qiita.com/pyon_kiti_jp/items/0ba98f140142d4ac6b25).
 
-* Check your version of Chrome browser.
-* Download the chromedriver for that particular version from this
+  1. Check your version of Chrome browser.
+  2. Download the chromedriver for that particular version from this
   [link](https://sites.google.com/a/chromium.org/chromedriver/downloads).
-* Unzip it and move it to a directory in your path.
+  3. Unzip it and move it to a directory in your path.
 ```
 cd /tmp/
 curl -O <chromedriver_of_your_browser_version>
