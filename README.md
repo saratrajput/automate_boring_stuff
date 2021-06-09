@@ -33,8 +33,20 @@ sudo mv chromedriver /usr/local/bin/
 Change the username and password 
 
 ## Crontab Instructions
-Change the time as per your liking:
+Cron jobs to log in and log out. Use this
+[site](https://crontab.guru/monday-to-friday) to find the cron time according to
+your timings. The time set below represent "Every weekday (Monday~Friday); Clock
+In at 10:00 and Clock Out at 19:30". Change the time as per your liking:
 ```
+# Add your python path in the beginning
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
-30 19 * * WED DISPLAY=:0 /home/sp/auto_env/bin/python /home/sp/repos/automate_boring_stuff/automate_king_of_time.py --clock_status Out > /tmp/king_app.log 2>&1
+
+# Clock In at 10:00
+0 10 * * 1-5 DISPLAY=:0 /home/sp/auto_env/bin/python /home/sp/repos/automate_boring_stuff/automate_king_of_time.py --clock_status Out > /tmp/king_app.log 2>&1
+# Clock Out at 19:30
+30 19 * * 1-5 DISPLAY=:0 /home/sp/auto_env/bin/python /home/sp/repos/automate_boring_stuff/automate_king_of_time.py --clock_status Out > /tmp/king_app.log 2>&1
 ```
+
+## Troubleshooting
+In the above crontab command, the output is logged at ```/tmp/king_app.log```.
+In case of any errors check the log.
